@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<style>
+    .section{padding:10px;margin:10px 0;background-color:#eee;border-radius:5px;}
+</style>
+<script type="text/javascript" src="http://www.ostools.net/js/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="http://www.ostools.net/uploads/jquery/highlighter/chili/jquery.chili-2.2.js"></script>
+<script type="text/javascript" src="http://www.ostools.net/uploads/jquery/highlighter/chili/recipes.js"></script>
+<script id="setup" type="text/javascript">
+ChiliBook.automatic = true;
+ChiliBook.lineNumbers = false;
+</script>
+<div class="section">
+<h1>代码分色示例</h1>
+<h3>PRE不带有 class="ln"</h3>
+<p>PRE不带有 class="ln" 代码将不会有行号</p>
+<pre>
+<code class="php">
+/**#@+
+ *  @access private
+ */
+// When strict mode applies for a language
+/** Strict mode never applies (this is the most common) */
+define(&#39;GESHI_NEVER&#39;, 0);
+/** Strict mode *might* apply, and can be enabled or
+    disabled by {@link GeSHi::enable_strict_mode()} */
+define(&#39;GESHI_MAYBE&#39;, 1);
+/** Strict mode always applies */
+define(&#39;GESHI_ALWAYS&#39;, 2);
+ 
+// Advanced regexp handling constants, used in language files
+/** The key of the regex array defining what to search for */
+define(&#39;GESHI_SEARCH&#39;, 0);
+/** The key of the regex array defining what bracket group in a
+    matched search to use as a replacement */
+define(&#39;GESHI_REPLACE&#39;, 1);
+/** The key of the regex array defining any modifiers to the regular expression */
+define(&#39;GESHI_MODIFIERS&#39;, 2);
+/** The key of the regex array defining what bracket group in a
+    matched search to put before the replacement */
+define(&#39;GESHI_BEFORE&#39;, 3);
+/** The key of the regex array defining what bracket group in a
+    matched search to put after the replacement */
+define(&#39;GESHI_AFTER&#39;, 4);
+/** The key of the regex array defining a custom keyword to use
+    for this regexp&#39;s html tag class */
+define(&#39;GESHI_CLASS&#39;, 5);
+ 
+/** Used in language files to mark comments */
+define(&#39;GESHI_COMMENTS&#39;, 0);
+ 
+// Error detection - use these to analyse faults
+/** No sourcecode to highlight was specified
+ * @deprecated
+ */
+define(&#39;GESHI_ERROR_NO_INPUT&#39;, 1);
+/** The language specified does not exist */
+define(&#39;GESHI_ERROR_NO_SUCH_LANG&#39;, 2);
+/** GeSHi could not open a file for reading (generally a language file) */
+define(&#39;GESHI_ERROR_FILE_NOT_READABLE&#39;, 3);
+/** The header type passed to {@link GeSHi::set_header_type()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_HEADER_TYPE&#39;, 4);
+/** The line number type passed to {@link GeSHi::enable_line_numbers()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_LINE_NUMBER_TYPE&#39;, 5);
+/**#@-*/
+</code></pre>
+</div>
+ 
+ 
+ 
+<div class="section">
+<h3>PRE带有 class="ln-"</h3>
+<p>PRE带有  class="ln-" 代码将会有从1开始的行号.</p>
+<pre class="ln-">
+<code class="php">
+/**#@+
+ *  @access private
+ */
+// When strict mode applies for a language
+/** Strict mode never applies (this is the most common) */
+define(&#39;GESHI_NEVER&#39;, 0);
+/** Strict mode *might* apply, and can be enabled or
+    disabled by {@link GeSHi::enable_strict_mode()} */
+define(&#39;GESHI_MAYBE&#39;, 1);
+/** Strict mode always applies */
+define(&#39;GESHI_ALWAYS&#39;, 2);
+ 
+// Advanced regexp handling constants, used in language files
+/** The key of the regex array defining what to search for */
+define(&#39;GESHI_SEARCH&#39;, 0);
+/** The key of the regex array defining what bracket group in a
+    matched search to use as a replacement */
+define(&#39;GESHI_REPLACE&#39;, 1);
+/** The key of the regex array defining any modifiers to the regular expression */
+define(&#39;GESHI_MODIFIERS&#39;, 2);
+/** The key of the regex array defining what bracket group in a
+    matched search to put before the replacement */
+define(&#39;GESHI_BEFORE&#39;, 3);
+/** The key of the regex array defining what bracket group in a
+    matched search to put after the replacement */
+define(&#39;GESHI_AFTER&#39;, 4);
+/** The key of the regex array defining a custom keyword to use
+    for this regexp&#39;s html tag class */
+define(&#39;GESHI_CLASS&#39;, 5);
+ 
+/** Used in language files to mark comments */
+define(&#39;GESHI_COMMENTS&#39;, 0);
+ 
+// Error detection - use these to analyse faults
+/** No sourcecode to highlight was specified
+ * @deprecated
+ */
+define(&#39;GESHI_ERROR_NO_INPUT&#39;, 1);
+/** The language specified does not exist */
+define(&#39;GESHI_ERROR_NO_SUCH_LANG&#39;, 2);
+/** GeSHi could not open a file for reading (generally a language file) */
+define(&#39;GESHI_ERROR_FILE_NOT_READABLE&#39;, 3);
+/** The header type passed to {@link GeSHi::set_header_type()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_HEADER_TYPE&#39;, 4);
+/** The line number type passed to {@link GeSHi::enable_line_numbers()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_LINE_NUMBER_TYPE&#39;, 5);
+/**#@-*/
+</code>
+</pre>
+</div>
+ 
+ 
+ 
+<div class="section">
+<h3>PRE带有 class="ln-172"</h3>
+<p>PRE带有  class="ln-N" 代码将带有从指定数字N开始的行号</p>
+<pre class="ln-172">
+<code class="php">
+/**#@+
+ *  @access private
+ */
+// When strict mode applies for a language
+/** Strict mode never applies (this is the most common) */
+define(&#39;GESHI_NEVER&#39;, 0);
+/** Strict mode *might* apply, and can be enabled or
+    disabled by {@link GeSHi::enable_strict_mode()} */
+define(&#39;GESHI_MAYBE&#39;, 1);
+/** Strict mode always applies */
+define(&#39;GESHI_ALWAYS&#39;, 2);
+ 
+// Advanced regexp handling constants, used in language files
+/** The key of the regex array defining what to search for */
+define(&#39;GESHI_SEARCH&#39;, 0);
+/** The key of the regex array defining what bracket group in a
+    matched search to use as a replacement */
+define(&#39;GESHI_REPLACE&#39;, 1);
+/** The key of the regex array defining any modifiers to the regular expression */
+define(&#39;GESHI_MODIFIERS&#39;, 2);
+/** The key of the regex array defining what bracket group in a
+    matched search to put before the replacement */
+define(&#39;GESHI_BEFORE&#39;, 3);
+/** The key of the regex array defining what bracket group in a
+    matched search to put after the replacement */
+define(&#39;GESHI_AFTER&#39;, 4);
+/** The key of the regex array defining a custom keyword to use
+    for this regexp&#39;s html tag class */
+define(&#39;GESHI_CLASS&#39;, 5);
+ 
+/** Used in language files to mark comments */
+define(&#39;GESHI_COMMENTS&#39;, 0);
+ 
+// Error detection - use these to analyse faults
+/** No sourcecode to highlight was specified
+ * @deprecated
+ */
+define(&#39;GESHI_ERROR_NO_INPUT&#39;, 1);
+/** The language specified does not exist */
+define(&#39;GESHI_ERROR_NO_SUCH_LANG&#39;, 2);
+/** GeSHi could not open a file for reading (generally a language file) */
+define(&#39;GESHI_ERROR_FILE_NOT_READABLE&#39;, 3);
+/** The header type passed to {@link GeSHi::set_header_type()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_HEADER_TYPE&#39;, 4);
+/** The line number type passed to {@link GeSHi::enable_line_numbers()} was invalid */
+define(&#39;GESHI_ERROR_INVALID_LINE_NUMBER_TYPE&#39;, 5);
+/**#@-*/
+</<cod></cod>e>
+</pre>
+</div>
+ 
+ 
+ 
+<div class="section">
+<h3>PRE带有 class="ln-172-access-private"</h3>
+<p>第一个PRE带有 class="ln-172-access-private" 代码会带有从制定行数开始编号的行号</p>
+<pre class="ln-172-access-private">
+<code class="php">
+/**#@+
+ *  @access private
+ */
+// When strict mode applies for a language
+/** Strict mode never applies (this is the most common) */
+define(&#39;GESHI_NEVER&#39;, 0);
+/** Strict mode *might* apply, and can be enabled or
+    disabled by {@link GeSHi::enable_strict_mode()} */
+define(&#39;GESHI_MAYBE&#39;, 1);
+/** Strict mode always applies */
+define(&#39;GESHI_ALWAYS&#39;, 2);
+ 
+</code></pre>
+</div>
+ 
+ 
+ 
+<div class="section">
+<h3>PRE带有 class="ln-172-access-private"</h3>
+<p>如何之前也有PER带有 class="ln-172-access-private"，那么该段代码将接上个PRE的最大编号开始显示行号。</p>
+<pre class="ln-172-access-private">
+    <code class="php">
+// Advanced regexp handling constants, used in language files
+/** The key of the regex array defining what to search for */
+define(&#39;GESHI_SEARCH&#39;, 0);
+/** The key of the regex array defining what bracket group in a
+    matched search to use as a replacement */
+define(&#39;GESHI_REPLACE&#39;, 1);
+/** The key of the regex array defining any modifiers to the regular expression */
+define(&#39;GESHI_MODIFIERS&#39;, 2);
+/** The key of the regex array defining what bracket group in a
+    matched search to put before the replacement */
+define(&#39;GESHI_BEFORE&#39;, 3);
+/** The key of the regex array defining what bracket group in a
+    matched search to put after the replacement */
+define(&#39;GESHI_AFTER&#39;, 4);
+/** The key of the regex array defining a custom keyword to use
+    for this regexp&#39;s html tag class */
+define(&#39;GESHI_CLASS&#39;, 5);
+ 
+/** Used in language files to mark comments */
+define(&#39;GESHI_COMMENTS&#39;, 0);
+ 
+</code>
+</pre>
+</div>
+</body>
+</html>

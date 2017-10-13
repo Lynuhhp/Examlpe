@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>DIV布局</title> 
+<link rel="stylesheet" href="index05.css" />
+<script type="text/javascript">
+function myfunction(){
+var c=document.getElementById("content");
+	c.innerHTML="网页内容";
+}
+function myfunction01(){
+document.getElementById("content").innerHTML=document.getElementById("content").innerHTML+1;
+}
+</script>
+</head>
+<body>
+ 
+<div id="container" >
+ 
+<div id="header" class="center">
+<h1 >主要的网页标题</h1>
+</div>
+ 
+<div id="menu" >
+<b >菜单</b><br>
+<ul>
+	<li><a href="#" onclick="myfunction()">HTML</a></li>
+	<li><a href="#" onclick="myfunction01()">CSS</a></li>
+	<li><a href="#">JavaScript</a></li>
+</ul>
+
+</div>
+ 
+<div id="content" class="center">
+1</div>
+ 
+<div id="footer" class="center">
+版权 © runoob.com</div>
+ 
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta content="always" name="referrer">
+    <title>百度全景看中国</title>
+    <style data-for="result">
+        html{min-height: 100%;}
+        body {
+            color: #333; 
+            background: #fff; 
+            padding: 0; 
+            margin: 0;
+            position: relative;
+            min-width: 700px;
+            font-family: PingFangSC-Regular, sans-serif;
+            font-size: 12px;
+            min-height: 100%;
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#15171c),to(#2c2e35));   
+            background: -moz-linear-gradient(top, #15171c, #2c2e35);   
+            background: -o-linear-gradient(top, #15171c, #2c2e35);   
+            background: -ms-linear-gradient(top, #15171c, #2c2e35);  
+            background:-webkit-linear-gradient(to bottom, #15171c, #2c2e35);
+            background:linear-gradient(to bottom, #15171c, #2c2e35);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0, startColorstr = #15171c, endColorstr = #2c2e35);}
+        p, form, ol, ul, li, dl, dt, dd, h3 {margin: 0; padding: 0; list-style: none }
+        input {padding-top: 0; padding-bottom: 0; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box } img {border: none; }
+        #egg-active-page {
+            background:#191b20; 
+            width: 100%;
+            height: 100%;
+            padding-bottom: 164px;
+        }
+        .egg-active-background {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            background:url(https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/pcmap.ebd41276.png)no-repeat;
+            background-position: 50% 30px;
+            background-size: 1201px auto;
+        }
+        .egg-active-head,
+        .egg-active-banner,
+        .egg-join-wrapper{
+            width: 721px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .egg-active-head {
+            font-size: 16px;
+            width: 710px;
+            padding: 28px 0;
+            text-align: left;
+            color: #333;
+            color: rgba(255,255,255,0.7);
+            margin: 0 auto;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzI1RTA2Nzk5NUYyMTFFN0I4RUJCNTUxQ0NBNTkwQ0MiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzI1RTA2N0E5NUYyMTFFN0I4RUJCNTUxQ0NBNTkwQ0MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3MjVFMDY3Nzk1RjIxMUU3QjhFQkI1NTFDQ0E1OTBDQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3MjVFMDY3ODk1RjIxMUU3QjhFQkI1NTFDQ0E1OTBDQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmQwd2sAAAEMSURBVHjapJNLCsJAEEQzIXfwgwb0CoKfZbJQELyFCz2HeAovIO7ElbpwqS4Ur+BfPIIIsVpKGcZE/DS8zXRVken0qCAILKPSoAJyIMazE1iCIdjqYqUFOKAOquAApmDHXgqUQJIhHXC5dyQAOKAFusAHiuc6ir0eaNPzDGjSnAkxmmSpbTwCXNBnuikeEPPcp8e1cYsyhzSxPi/RHsXrcNozGUeIsBYRINo5yMsXxME+QjggYSV/KG5rib/U1eb9Uz+YxXOWgAUoylJ9YRZtAawkYMw5eF8EiDYBRv8sUlPfRH2VvTer7Jmr/O4xyW5s2HM5p5fHpEKes2s856tMWwZ2v7NlrXXxTYABAKHiMf8q3KOXAAAAAElFTkSuQmCC) no-repeat;
+            background-size: 16px;
+            background-position-y: center; 
+            /*margin:30px auto;*/
+        }
+        .egg-active-head span{
+            margin-left: 22px;
+        }
+        .egg-active-head span:hover {
+            cursor: pointer;
+        }
+        .egg-active-title {
+            color: #fff;
+            text-align: center;
+            margin-top: 3px;
+            width: 100%;
+        }
+        .egg-active-title div {
+            font-size: 32px;
+            letter-spacing: 6px;
+            padding-left: 10px;
+        }
+        .egg-active-title div span:last-child {
+            margin-left: -6px;
+        }
+        .egg-active-title h3 {
+            font-size: 103px;
+
+        }
+        .egg-active-banner {
+            background: rgba(0,0,0,0.4);
+            height: 45px;
+            line-height: 45px;
+            border-radius: 22px;
+            color: #549af2;
+            font-size: 27px;text-align: center;
+            letter-spacing: 12px;
+            margin-bottom: 10px;
+        }
+        .egg-join-cut-line {
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsYAAAAQCAYAAAAVkLmuAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUZGQTlENDg5NUIzMTFFN0I4RUJCNTUxQ0NBNTkwQ0MiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzI1RTA2NzY5NUYyMTFFN0I4RUJCNTUxQ0NBNTkwQ0MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxRkZBOUQ0Njk1QjMxMUU3QjhFQkI1NTFDQ0E1OTBDQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxRkZBOUQ0Nzk1QjMxMUU3QjhFQkI1NTFDQ0E1OTBDQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puz9cbkAAAKMSURBVHja7N09aFNRGMbxN34g6FB0Eor4jWDtIIi4FEUQxEERaZ2KrioVCoKCS6CKtKMoTg5CF1FUcBVLSxFqXRxKC4pWxEFBtIKDHxifl3Oql5Dc5EJo79X/Dx5okpvl7Uny5uTcc0uVSsUAIEWn8kb5QilQYHuUZ8pPSgGgniWUAEADl5WzlAEFVlKuKycoBYDUNwtmjAGk2KU8VT4rG5U5SoICOqI8UF4r25QflARALcwYA0hTtjDbtlrppxwooFIcxxa/3J2kJADqvmEwYwygjt3KROL2XGwsPlEaFMhR5V7i9qyFWePvlAZAtWWUAEDCCmWLslU5V/VYm3JVGVZeWjghjxOZkEcr4zj2DFQ9tkEZUh7GcfxW+UXJADhmjAEcUM7HJmKdNb/EytdpziovlD7lFaXEIjqunIrjuD3D877FsTulnFE+UErg/8UaYwCPlBllfcb3hOXKJuUuTTFy4H5satszPs9/JfElQrdoigH4jHGZMgCF1crX7xXlQobjfca4V7nNvwE5sVS5adm2ZfuqHFYe5/R1CWCBG2OqAGDeReVSE8f5z8/dFtZpArn6XFOuKaebONZPKD2kPKFsAGiMAdTiJ9j1NTjGZ4qHKRVy3BzfUY41OG6/MkK5AMxjjTGAWk1FK44BFkulyc83xjEAGmMAqTpbdAzAOAZAYwzgn2ooJi1sy0ZDgaJYZWHHlKQx5X3VfTsoFQAaYwD1rFXWxL+fWzhb36+A51cK85OZ3sXHOigVcqwj8fk2ruxT9iqbLey88pFxDIDGGEAjPhM8rfQoO+3vrhN++dwbFq6I129h79c2yoWc2m7hl46DSpcyGu/3rdkGLcwmly1c0IZ1xgD++C3AAP3Faeo72FFfAAAAAElFTkSuQmCC) no-repeat;
+            background-size: 100%;
+            background-position: center; 
+            color: #fff;
+            font-size: 26px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .egg-join-img-list {
+            white-space: nowrap;
+        }
+        .egg-join-img-entity {
+            width: 230px;
+            margin-right: 10px;
+            background: #fff;
+            display: inline-block;
+        }
+        .egg-join-img-entity .egg-join-img {
+            height: 120px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        .egg-join-img-entity .egg-join-img img {
+            max-height: 100%;
+        }
+        .egg-join-img-entity .egg-join-img-info {
+            height: 60px;
+            box-sizing: border-box;
+            background: #f2f2f2;
+            text-align: center;
+            color: #333;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 10px 0;
+        }
+        .egg-join-img-entity .egg-join-img-info p {
+            line-height: 20px;
+        }
+        #egg-active-page-mask {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left:0;
+            top:0;
+            z-index: 999;
+            background: rgba(0,0,0,0.6);
+        }
+        .egg-active-intro-window {
+            background:#fff;
+            width: 440px;
+            height: 580px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin-left: -220px;
+            margin-top: -270px;
+            border-radius: 9px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .egg-active-intro-item {
+            padding-top: 26px;
+            padding-bottom: 27px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .egg-active-intro-item:last-child {
+            border-bottom: none;
+        }
+        .egg-active-intro-title {
+            font-size: 22px;
+            color: #333;
+            text-align: center;
+        }
+        .egg-active-intro-text {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #666;
+        }
+        .egg-intro-close {
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            background: #3868f2;
+            text-align: center;
+            font-size: 16px;
+            color: #fefefe;
+            line-height: 40px;
+            margin: 0 auto;
+        }
+        .egg-intro-close:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="egg-active-page">
+        <div class="egg-active-background"></div>
+        <div class="egg-active-head" id="egg-active-intro-button">
+            <span>寻宝活动说明</span>
+        </div>
+        <div class="egg-active-title">
+            <div>
+                <span>720°</span>
+                <span>游尽3000+顶级景区</span>
+            </div>
+            <h3>百度全景看中国</h3>
+        </div>
+        <div class="egg-active-banner">3亿奖池！全景内寻宝100%中奖</div>
+        <div class="egg-join-wrapper">
+        <div class="egg-join-cut-line">参与方式</div>
+        <div class="egg-join-img-list">
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/xiazaiewm.0b9b57d4.png " alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>扫码下载（安卓端）</p>
+                    <p>手机百度APP</p>
+                </div>
+            </div>
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/hdyewm.bea6d4e9.png" alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>打开手机百度</p>
+                    <p>扫码进入活动页</p>
+                </div>
+            </div>
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/pcstep.f2155a50.png" alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>打开手机百度</p>
+                    <p>搜索“百度全景看中国”</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="egg-join-wrapper">
+        <div class="egg-join-cut-line">活动奖品</div>
+        <div class="egg-join-img-list">
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/pciphone8.c996585a.png" alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>一等奖</p>
+                    <p>iPhone 8</p>
+                </div>
+            </div>
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/pcerji.6782a42e.png" alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>二等奖</p>
+                    <p>索尼耳机</p>
+                </div>
+            </div>
+            <div class="egg-join-img-entity">
+                <div class="egg-join-img">
+                    <img src="https://gss0.baidu.com/9rkZbzqaKgQUohGko9WTAnF6hhy/mms-res/voice/changting/quanjingkanzhongguo/pcwifi.08fa576d.png" alt="">
+                </div>
+                <div class="egg-join-img-info">
+                    <p>三等奖</p>
+                    <p>Newwifi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+(function () {
+    var button = document.getElementById('egg-active-intro-button');
+    var mask = document.createElement('div');
+    mask.id = "egg-active-page-mask";
+    var introWindow = '';
+    button.onclick = function() {
+        document.body.appendChild(mask);
+        introWindow = '<div class="egg-active-intro-window">' + 
+                        '<div class="egg-active-intro-item">'+
+                            '<p class="egg-active-intro-title">活动规则</p>'+
+                            '<div class="egg-active-intro-text"><p>1、活动时间：9月28日－10月8日</p><p>2、手机百度APP搜索【百度全景看中国】进入活动页面点击任意全景景区即可寻找并开启宝箱，活动期间每人每天均有中奖机会</p><p>3、查看我的奖品：在手机百度APP中，语音搜索“我的奖品”</p><p>4、如有任何问题及建议可随时联系QQ群: 571321669</p>'+
+                            '</div></div>'+
+                        '<div class="egg-active-intro-item">'+
+                            '<p class="egg-active-intro-title">兑奖说明</p>'+
+                            '<div class="egg-active-intro-text"><p>1、同一百度账号同一手机设备同一手机号同一邮箱视为同一用户</p><p>2、活动最终解释权在法律范围内归百度搜索所有</p>'+
+                            '</div></div>'+
+                        '<div class="egg-active-intro-item" style="border-bottom: none;">'+
+                            '<p class="egg-active-intro-title">服务商合作</p>'+
+                            '<div class="egg-active-intro-text"><p>1、官网：xr.baidu.com</p><p>2、申请入驻请与xr@baidu.com联系</p>'+
+                            '</div></div>'+
+                            '<div class="egg-intro-close" id="egg-intro-close-button">关闭</div>'
+                    '</div></div>';
+        document.getElementById('egg-active-page-mask').innerHTML = introWindow;
+        document.getElementById('egg-intro-close-button').onclick=function () {
+            document.body.removeChild(mask);
+        }
+    };
+})();
+</script>
+
+</html>
